@@ -1,1 +1,43 @@
-Simple Buy Stuff
+<html lang="sv-se">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Buy Stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div>
+        <h1>Simple Buy Stuff</h1>
+
+        <p class="lead">A simple calculator for calculating the "actual" price when buying "work related stuff" at
+            Aptitud.</p>
+    </div>
+    <div>
+        <form role="form">
+            <div class="form-group">
+                <label for="amount">Belopp</label>
+                <input id="amount" type="number" class="form-control" placeholder="10000">
+            </div>
+            <div class="form-group">
+                <label for="vat">Moms (%)</label>
+                <input id="vat" type="number" class="form-control" placeholder="Moms (%)" value="25">
+            </div>
+            <div class="form-group">
+                <label for="tax">Skattetryck (%)</label>
+                <input id="tax" type="number" class="form-control" placeholder="Skattetryck (%)" value="58">
+            </div>
+            <button type="submit" class="btn btn-default pull-right">Beräkna</button>
+        </form>
+    </div>
+</div>
+
+</body>
+
+</html>
