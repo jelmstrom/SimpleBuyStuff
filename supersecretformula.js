@@ -23,3 +23,18 @@ $('#price').keypress(function (event) {
         $('#calculateButton').click();
     }
 });
+
+$(document).ready(function () {
+    $("#advancedButton").click(function () {
+        $("#form").animate({height: "240px"});
+        $('#advanced').show();
+        $("#advancedButton").hide();
+        $("#simpleButton").show();
+    });
+    $("#simpleButton").click(function () {
+        $("#form").animate({height: "90px"});
+        $("#advancedButton").show();
+        $("#simpleButton").hide();
+        $('#advanced').hide();
+    });
+});

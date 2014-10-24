@@ -23,32 +23,48 @@
             Aptitud.</p>
     </div>
 
-    <div id="form">
-        <div class="form-group">
-            <label for="price">Price (SEK)</label>
-            <input id="price" type="number" class="form-control">
-            <button type="button" onclick="$('#advanced').toggle();" class="btn btn-link pull-right">Advanced</button>
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="form" style="height: 90px; overflow: hidden">
+                <div class="form-group">
+                    <label for="price">Price (SEK)</label>
+                    <input id="price" type="number" class="form-control">
+                    <a href="#" id="advancedButton" class="btn btn-link pull-right">Advanced</a>
+                    <a href="#" id="simpleButton" class="btn btn-link pull-right" style="display: none">Simple</a>
+                </div>
+
+                <span id="advanced" style="display: none">
+                    <div class="form-group">
+                        <label for="vat">VAT (%)</label>
+                        <input id="vat" type="number" class="form-control" value="25">
+                    </div>
+                    <div class="form-group">
+                        <label for="tax">Tax (%) *</label>
+                        <input id="tax" type="number" class="form-control" value="57">
+                    </div>
+                    <p class="small">* The default tax used is 57% (32% kommunalskatt + 20% statlig inkomstskatt +5%
+                        värnskatt)</p>
+                </span>
+            </div>
         </div>
-        <span id="advanced" style="display: none">
-            <div class="form-group">
-                <label for="vat">VAT (%)</label>
-                <input id="vat" type="number" class="form-control" value="25">
-            </div>
-            <div class="form-group">
-                <label for="tax">Tax (%) *</label>
-                <input id="tax" type="number" class="form-control" value="57">
-            </div>
-            <p class="small">* The default tax used is 57% (32% kommunalskatt + 20% statlig inkomstskatt +5%
-                värnskatt)</p>
-        </span>
-        <button id="calculateButton" type="button" class="btn btn-default" onclick="doSecretStuff()">Calculate</button>
+    </div>
+
+    <div class="row" style="margin-top: 10px">
+        <div class="col-xs-12">
+            <button id="calculateButton" type="button" class="btn btn-default" onclick="doSecretStuff()">Calculate
+            </button>
+        </div>
     </div>
 
     <br/>
 
-    <div id="result" style="display: none">
-        <div class="alert alert-info" role="alert">
-            Actual price will be <strong><span id="actualPrice">X</span> SEK</strong>
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="result" style="display: none">
+                <div class="alert alert-info" role="alert">
+                    Actual price will be <strong><span id="actualPrice">X</span> SEK</strong>
+                </div>
+            </div>
         </div>
     </div>
 
