@@ -7,7 +7,7 @@ function calculateActualPrice() {
     var vat = parseFloat($('#vat').val());
     var tax = parseFloat($('#tax').val());
     var actualPrice = price * (price / (price + (price * (vat / 100)))) * ((100 - tax) / 100);
-    return actualPrice;
+    return parseInt(actualPrice);
 }
 
 function showResult(actualPrice) {
