@@ -1,12 +1,16 @@
-function calculatePrice() {
-    var price = parseFloat(document.getElementById("price").value);
-    var vat = parseFloat(document.getElementById("vat").value);
-    var tax = parseFloat(document.getElementById("tax").value);
+function doSecretStuff() {
+    showResult(calculateActualPrice());
+}
+
+function calculateActualPrice() {
+    var price = parseFloat($('#price').val());
+    var vat = parseFloat($('#vat').val());
+    var tax = parseFloat($('#tax').val());
     var actualPrice = price * (price / (price + (price * (vat / 100)))) * ((100 - tax) / 100);
-    showResult(actualPrice);
+    return actualPrice;
 }
 
 function showResult(actualPrice) {
-    document.getElementById("actualPrice").innerHTML = actualPrice;
-    document.getElementById("result").style.display = "";
+    $("#actualPrice").text(actualPrice);
+    $('#result').toggle();
 }
