@@ -23,21 +23,22 @@
     </div>
 
     <div id="form">
-        <!--form role="form"-->
         <div class="form-group">
             <label for="price">Price (SEK)</label>
             <input id="price" type="number" class="form-control">
+            <button type="button" onclick="$('#advanced').toggle();" class="btn btn-link pull-right">Advanced</button>
         </div>
-        <div class="form-group" style="display: none">
-            <label for="vat">VAT (%)</label>
-            <input id="vat" type="number" class="form-control" value="25">
-        </div>
-        <div class="form-group" style="display: none">
-            <label for="tax">Tax (%)</label>
-            <input id="tax" type="number" class="form-control" value="58">
-        </div>
+        <span id="advanced" style="display: none">
+            <div class="form-group">
+                <label for="vat">VAT (%)</label>
+                <input id="vat" type="number" class="form-control" value="25">
+            </div>
+            <div class="form-group">
+                <label for="tax">Tax (%)</label>
+                <input id="tax" type="number" class="form-control" value="58">
+            </div>
+        </span>
         <button type="submit" class="btn btn-default" onclick="calculatePrice()">Calculate</button>
-        <!--/form-->
     </div>
 
     <br/>
