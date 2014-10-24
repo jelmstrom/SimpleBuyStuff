@@ -17,12 +17,16 @@ function showResult(actualPrice) {
 
 // Init the page
 $('#price').focus();
-$('#price').keypress(function (event) {
+
+var onEnter = function (event) {
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if (keycode == '13') {
         $('#calculateButton').click();
     }
-});
+};
+$('#price').keypress(onEnter);
+$('#vat').keypress(onEnter);
+$('#tax').keypress(onEnter);
 
 $(document).ready(function () {
     $("#advancedButton").click(function () {
