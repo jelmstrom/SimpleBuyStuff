@@ -11,9 +11,6 @@
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
           rel="stylesheet" type="text/css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="supersecretformula.js"></script>
 </head>
 
 <body class="header">
@@ -44,7 +41,7 @@
             <p class="small">* The default tax used is 57% (32% kommunalskatt + 20% statlig inkomstskatt +5%
                 värnskatt)</p>
         </span>
-        <button type="submit" class="btn btn-default" onclick="doSecretStuff()">Calculate</button>
+        <button id="calculateButton" type="button" class="btn btn-default" onclick="doSecretStuff()">Calculate</button>
     </div>
 
     <br/>
@@ -56,6 +53,10 @@
     </div>
 
 </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="supersecretformula.js"></script>
 
 </body>
 

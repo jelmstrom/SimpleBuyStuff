@@ -12,5 +12,14 @@ function calculateActualPrice() {
 
 function showResult(actualPrice) {
     $("#actualPrice").text(actualPrice);
-    $('#result').toggle();
+    $('#result').show();
 }
+
+// Init the page
+$('#price').focus();
+$('#price').keypress(function (event) {
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if (keycode == '13') {
+        $('#calculateButton').click();
+    }
+});
